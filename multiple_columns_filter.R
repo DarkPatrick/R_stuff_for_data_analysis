@@ -5,7 +5,7 @@ multiple_filter <- function(data, col_names_pattern, condition) {
     col_nums <- grep(col_names_pattern, names(data))
     filtering_cols <- sapply(col_nums,
         function(x) {
-            paste0(deparse(substitute(data)), "[", x, "]", condition)
+            paste0(deparse(substitute(data)), "[,", x, "]", condition)
         }
     )
     filtering_str <- paste(filtering_cols, collapse = " & ")
