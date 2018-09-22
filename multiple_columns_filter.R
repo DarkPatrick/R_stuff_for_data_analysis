@@ -29,7 +29,7 @@ multiple_filter <- function(
     if (length(strict_col_nums) > 0) {
         col_nums <- strict_col_nums
     } else {
-        if (length(strict_col_names)) {
+        if (length(strict_col_names) > 0) {
             col_nums <- which(names(data) %in% strict_col_names)
         } else {
             col_nums <- grep(col_names_pattern, names(data))
